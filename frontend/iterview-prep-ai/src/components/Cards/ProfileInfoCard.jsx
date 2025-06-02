@@ -15,9 +15,14 @@ const ProfileInfoCard = () => {
   return (
     user && (
       <div className="flex items-center">
-        <img
+        {/* <img
           src={user?.profileImageUrl}
           alt=""
+          className="w-11 h-11 bg-gray-300 rounded-full mr-3"
+        /> */}
+        <img
+          src={user?.profileImageUrl?.replace("http://", "https://")}
+          alt="profile"
           className="w-11 h-11 bg-gray-300 rounded-full mr-3"
         />
         <div>

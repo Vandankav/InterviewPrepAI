@@ -16,6 +16,14 @@ const uploadImage = async (imageFile) => {
         },
       }
     );
+
+    if (response.data?.imageUrl) {
+      response.data.imageUrl = response.data.imageUrl.replace(
+        "http://",
+        "https://"
+      );
+    }
+
     return response.data; // Return response data
   } catch (error) {
     console.error("Error uploading the image:", error);
