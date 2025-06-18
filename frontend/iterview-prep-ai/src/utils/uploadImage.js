@@ -1,9 +1,43 @@
+// import { API_PATHS } from "./apiPaths";
+// import axiosInstance from "./axiosInstance";
+
+// const uploadImage = async (imageFile) => {
+//   const formData = new FormData();
+//   // Append image file to form data
+//   formData.append("image", imageFile);
+
+//   try {
+//     const response = await axiosInstance.post(
+//       API_PATHS.IMAGE.UPLOAD_IMAGE,
+//       formData,
+//       {
+//         headers: {
+//           "Content-Type": "multipart/form-data", // Set header for file upload
+//         },
+//       }
+//     );
+
+//     if (response.data?.imageUrl) {
+//       response.data.imageUrl = response.data.imageUrl.replace(
+//         "http://",
+//         "https://"
+//       );
+//     }
+
+//     return response.data; // Return response data
+//   } catch (error) {
+//     console.error("Error uploading the image:", error);
+//     throw error; // Rethrow error for handling
+//   }
+// };
+
+// export default uploadImage;
+
 import { API_PATHS } from "./apiPaths";
 import axiosInstance from "./axiosInstance";
 
 const uploadImage = async (imageFile) => {
   const formData = new FormData();
-  // Append image file to form data
   formData.append("image", imageFile);
 
   try {
@@ -12,22 +46,15 @@ const uploadImage = async (imageFile) => {
       formData,
       {
         headers: {
-          "Content-Type": "multipart/form-data", // Set header for file upload
+          "Content-Type": "multipart/form-data",
         },
       }
     );
 
-    if (response.data?.imageUrl) {
-      response.data.imageUrl = response.data.imageUrl.replace(
-        "http://",
-        "https://"
-      );
-    }
-
-    return response.data; // Return response data
+    return response.data; // Cloudinary already returns HTTPS URL
   } catch (error) {
     console.error("Error uploading the image:", error);
-    throw error; // Rethrow error for handling
+    throw error;
   }
 };
 
