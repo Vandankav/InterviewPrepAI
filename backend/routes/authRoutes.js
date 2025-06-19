@@ -58,10 +58,10 @@ router.get("/profile", protect, getUserProfile);
 // Image upload using Cloudinary
 router.post("/upload-image", upload.single("image"), async (req, res) => {
   try {
+    console.log("Uploaded file:", req.file); // Add this to debug
     if (!req.file) {
       return res.status(400).json({ message: "No file uploaded" });
     }
-    console.log("Uploaded file:", req.file); // Add this to debug
 
     const streamUpload = (fileBuffer) => {
       return new Promise((resolve, reject) => {

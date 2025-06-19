@@ -48,6 +48,7 @@ const uploadImage = async (imageFile) => {
       // No need to set headers here
     );
 
+    console.log("Image upload response:", response.data);
     return response.data; // Cloudinary already returns HTTPS URL
   } catch (error) {
     console.error("Error uploading the image:", error);
