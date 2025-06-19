@@ -61,6 +61,7 @@ router.post("/upload-image", upload.single("image"), async (req, res) => {
     if (!req.file) {
       return res.status(400).json({ message: "No file uploaded" });
     }
+    console.log("Uploaded file:", req.file); // Add this to debug
 
     const streamUpload = (fileBuffer) => {
       return new Promise((resolve, reject) => {
