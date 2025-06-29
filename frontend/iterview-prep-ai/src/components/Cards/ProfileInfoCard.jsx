@@ -21,7 +21,7 @@ const ProfileInfoCard = () => {
           className="w-11 h-11 bg-gray-300 rounded-full mr-3"
         /> */}
         <img
-          src={user?.profileImageUrl?.replace("http://", "https://")}
+          src={user?.profileImageUrl}
           alt="profile"
           className="w-11 h-11 bg-gray-300 rounded-full mr-3"
         />

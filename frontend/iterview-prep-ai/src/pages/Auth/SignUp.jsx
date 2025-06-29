@@ -43,6 +43,7 @@ const SignUp = ({ setCurrentPage }) => {
 
     try {
       // Upload image if present
+      console.log("ProfilePic", profilePic);
       if (profilePic) {
         const imgUploadRes = await uploadImage(profilePic);
         profileImageUrl = imgUploadRes?.imageUrl || "";
