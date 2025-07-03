@@ -126,66 +126,6 @@ const SignUp = ({ setCurrentPage }) => {
         </p>
       </form>
     </div>
-    // <div className="w-[90vw] md:w-[70vw] p-5 flex flex-col">
-    //   <div className="flex flex-col md:flex-row justify-center items-center md:space-x-6">
-    //     <div>
-    //       <h3 className="text-lg font-semibold text-black">
-    //         Create an Account
-    //       </h3>
-    //       <p className="text-xs text-slate-700 mt-[5px]">
-    //         Join us today by entering your details below.
-    //       </p>
-    //     </div>
-    //     <div className="flex justify-center items-center">
-    //       <ProfilePhotoSelector image={profilePic} setImage={setProfilePic} />
-    //     </div>
-    //   </div>
-    //   <form onSubmit={handleSignUp}>
-    //     <div className="grid grid-cols-1 md:grid-cols-1">
-    //       <Input
-    //         value={fullName}
-    //         onChange={setFullName}
-    //         label="Full Name"
-    //         placeholder="John"
-    //         type="text"
-    //       />
-
-    //       <Input
-    //         value={email}
-    //         onChange={setEmail}
-    //         label="Email Address"
-    //         placeholder="john@example.com"
-    //         type="text"
-    //       />
-
-    //       <Input
-    //         value={password}
-    //         onChange={setPassword}
-    //         label="Password"
-    //         placeholder="Min 8 Characters"
-    //         type="password"
-    //       />
-    //     </div>
-
-    //     {error && <p className="text-red-500 text-xs pb-2.5">{error}</p>}
-
-    //     <button type="submit" className="btn-primary w-full mt-2">
-    //       SIGN UP
-    //     </button>
-
-    //     <p className="text-[13px] text-slate-800 mt-3 text-center">
-    //       Already an account?{" "}
-    //       <button
-    //         className="font-medium text-primary underline cursor-pointer"
-    //         onClick={() => {
-    //           setCurrentPage("login");
-    //         }}
-    //       >
-    //         Login
-    //       </button>
-    //     </p>
-    //   </form>
-    // </div>
   );
 };
 
